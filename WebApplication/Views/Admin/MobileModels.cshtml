@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Mobile Models";
+    ViewBag.SubTitle = "Add/Edit/View Mobile Model Details";
+}
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Admin/MobileModels-menu")
+}
+
+@Styles.Render("~/AdminLTE/plugins/datatables/css")
+
+@using WebApplication.Models
+@model MobileModelInfo
+
+<div class="row">
+    <div class="content">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Mobile Models</h3>
+            </div>
+            <div class="box-body">
+                <input type="hidden" id="BrandId" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ModelId">Mobile Brand</label>
+                            <select class="form-control select2" id="ModelId" style="width: 100%;">
+                                <option>Nokia</option>
+                                <option>Samsung</option>
+                                <option>Lenovo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ModelName">Mobile Model Name</label>
+                            <input type="text" class="form-control" id="ModelName" placeholder="Model Name">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="DealerPrice">Dealer Price</label>
+                            <input type="text" class="form-control" id="DealerPrice" placeholder="Dealer price">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Mop">M.O.P</label>
+                            <input type="text" class="form-control" id="Mop" placeholder="Mop">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Mrp">M.R.P</label>
+                            <input type="text" class="form-control" id="Mrp" placeholder="Mrp">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="StockInHand">Stock In Hand</label>
+                            <input type="text" class="form-control" id="StockInHand" placeholder="Stock">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="button" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info">Save</button>
+            </div>
+        </div>
+
+  
+        <div class="box box-info">
+            <div class="box-header">
+                <h3 class="box-title">Mobile Model List</h3>
+            </div>
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width:40px">S.No</th>
+                            <th>Brand Name</th>
+                            <th>Modle Name</th>
+                            <th>Stock In Hand</th>
+                            <th style="width:50px">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nokia</td>
+                            <td>Lumia</td>
+                            <td>10</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Samsung</td>
+                            <td>Galaxy</td>
+                            <td>10</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Karbon</td>
+                            <td>Turbo</td>
+                            <td>4</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Vivo</td>
+                            <td>Selfie</td>
+                            <td>15</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Oppo</td>
+                            <td>OppoStickie</td>
+                            <td>20</td>
+                            <td>
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/AdminLTE/plugins/datatables/js")
+    @Scripts.Render("~/Scripts/Tables/Data")
+}
+
