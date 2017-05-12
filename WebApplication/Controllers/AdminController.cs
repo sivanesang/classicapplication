@@ -41,5 +41,31 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult CustomerDetails()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CustomerDetails(CustomerDetailsInfo model)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult PurchaseParty()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult PurchaseParty(CustomerDetailsInfo model)
+        {
+            return View();
+        }
     }
 }

@@ -185,6 +185,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomerDetailsInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MobileModelInfo.cs" />
@@ -506,6 +507,8 @@
     <Content Include="Views\Home\DashboardV3.cshtml" />
     <Content Include="Views\Admin\MobileBrands.cshtml" />
     <Content Include="Views\Admin\MobileModels.cshtml" />
+    <Content Include="Views\Admin\CustomerDetails.cshtml" />
+    <Content Include="Views\Admin\PurchaseParty.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
